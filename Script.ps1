@@ -64,5 +64,5 @@ $chaos = {
 
 # THE DETACH STEP: 
 # Spawns the $chaos block as a new hidden process and immediately exits this window.
-Start-Process powershell -ArgumentList "-WindowStyle Hidden", "-ExecutionPolicy Bypass", "-Command", $chaos.ToString()
+Start-Process powershell -ArgumentList "-WindowStyle Visible", "-ExecutionPolicy Bypass", "-Command", $chaos.ToString()
 exit
